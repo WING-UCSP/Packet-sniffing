@@ -1,4 +1,4 @@
-**<span class="underline">Packet Sniffing</span>**
+**<span class="underline">A study on packet sniffing and parsing</span>**
 
 <span class="underline"></span>
 
@@ -47,11 +47,6 @@ raw INET(IPv4) socket. This program then goes into an infinite loop
 listening to a particular port. Terminal will require root access to
 create raw socket. The output of this program will be non-parsed data.
 
-![](media/image1.png)
-
-![](media/image2.png)
-
-Output of sniffer.py
 
 <span class="underline"></span>
 
@@ -60,9 +55,6 @@ Output of sniffer.py
 The output of the file sniffer.py is non readable. parser.py parses this
 output to convert it into a readable format.
 
-![](media/image3.png)Ethernet frame structure.
-
-![](media/image4.png)IP header.
 
 The first 6 bytes are for the Destination MAC address and the next 6
 bytes are for the Source MAC. The last 2 bytes are for the Ether Type,
@@ -110,20 +102,12 @@ unpack transport protocol.
 The function tcp\_head(raw\_data) unpacks the data as per the TCP packet
 header’s structure.
 
-![](media/image5.png)TCP Header Structure.
 
 Similarly ICMP and UDP packets are packets are unpacked in main function
 according to their structure.
 
-![](media/image6.png)ICMP Header Structure.
-
-![](media/image7.png)UDP Header Structure.
-
 The output will print all the packets that were sniffed.
 
-![](media/image8.png)
-
-Output of parser.py
 
 <span class="underline"></span>
 
